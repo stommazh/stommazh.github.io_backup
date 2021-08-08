@@ -1,0 +1,133 @@
+
+@font-face {
+  font-family: Averta;
+  src: url(static/fonts/averta_regular.otf);
+  font-weight: normal;
+}
+@font-face {
+  font-family: Averta;
+  src: url(static/fonts/averta_light.otf);
+  font-weight: 300;
+}
+@font-face {
+  font-family: Averta;
+  src: url(static/fonts/averta_bold.otf);
+  font-weight: bold;
+}
+
+:root {
+  font-family: Averta, Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+  Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --font-mono: 'Averta', monospace;
+  --pure-white: #ffffff;
+  --primary-color: #b9c6d2;
+  --secondary-color: #d0dde9;
+  --tertiary-color: #edf0f8;
+  --accent-color: #ff3e00;
+  --heading-color: #fff;
+  --text-color: #444444;
+  --background-without-opacity: rgba(255, 255, 255, 0.7);
+  --column-width: 42rem;
+  --column-margin-top: 4rem;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background-color: #fff;
+}
+* {
+  cursor: url("static/cursor.png")8 8, auto!important;
+}
+
+#svelte {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1,
+h2{
+  font-weight: 400;
+  color: var(--heading-color);
+}
+
+p {
+  line-height: 1.5;
+  color: var(--text-color);
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 0 0 1em 0;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1rem;
+}
+
+pre {
+  font-size: 16px;
+  font-family: var(--font-mono);
+  background-color: rgba(255, 255, 255, 0.45);
+  border-radius: 3px;
+  box-shadow: 2px 2px 6px rgb(255,255,255, 0.25);
+  padding: 0.5em;
+  overflow-x: auto;
+  color: var(--text-color);
+}
+
+input,
+button {
+  font-size: inherit;
+  font-family: inherit;
+}
+
+button:focus:not(:focus-visible) {
+  outline: none;
+}
+
+h1, h2 {
+  -webkit-text-stroke: 2px black;
+}
+
+@media (min-width: 720px) {
+  h1 {
+    font-size: 2.4rem;
+  }
+}
+main {
+  flex: 1;
+  padding: 1rem;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+footer a {
+  font-weight: bold;
+}
+
+@media (min-width: 480px) {
+  footer {
+    padding: 40px 0;
+  }
+}

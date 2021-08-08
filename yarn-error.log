@@ -1,0 +1,72 @@
+Arguments: 
+  /Users/khanglvm/.nvm/versions/node/v16.1.0/bin/node /Users/khanglvm/.yarn/bin/yarn.js
+
+PATH: 
+  /Users/khanglvm/.yarn/bin:/Users/khanglvm/.config/yarn/global/node_modules/.bin:/usr/local/opt/php@7.2/sbin:/usr/local/opt/php@7.2/bin:/usr/local/opt/php@7.2/bin:/Users/khanglvm/.nvm/versions/node/v16.1.0/bin:/Users/khanglvm/.yarn/bin:/Users/khanglvm/.config/yarn/global/node_modules/.bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/khanglvm/Desktop/t7m/t7m/node_modules/.bin
+
+Yarn version: 
+  1.22.5
+
+Node version: 
+  16.1.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Users/khanglvm/Desktop/t7m/t7m/package.json: Unexpected token } in JSON at position 1283
+      at JSON.parse (<anonymous>)
+      at /Users/khanglvm/.yarn/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/Users/khanglvm/.yarn/lib/cli.js:310:30)
+      at /Users/khanglvm/.yarn/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "t7m",
+    "version": "0.0.1",
+    "scripts": {
+      "dev": "svelte-kit dev",
+      "build": "svelte-kit build",
+      "preview": "svelte-kit preview",
+      "check": "svelte-check --tsconfig ./tsconfig.json",
+      "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
+      "lint": "prettier --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
+      "format": "prettier --write --plugin-search-dir=. ."
+    },
+    "devDependencies": {
+      "@sveltejs/adapter-static": "next",
+      "@sveltejs/kit": "next",
+      "@types/cookie": "^0.4.0",
+      "@typescript-eslint/eslint-plugin": "^4.19.0",
+      "@typescript-eslint/parser": "^4.19.0",
+      "eslint": "^7.22.0",
+      "eslint-config-prettier": "^8.1.0",
+      "eslint-plugin-svelte3": "^3.2.0",
+      "node-sass": "^6.0.0",
+      "prettier": "~2.2.1",
+      "prettier-plugin-svelte": "^2.2.0",
+      "scss": "^0.2.4",
+      "svelte": "^3.34.0",
+      "svelte-check": "^2.0.0",
+      "svelte-preprocess": "^4.0.0",
+      "svelte-windicss-preprocess": "^4.0.8",
+      "tslib": "^2.0.0",
+      "typescript": "^4.0.0",
+      "windicss": "^3.1.3",
+      "vite": "^2.3.7",
+      "vite-plugin-windicss": "^1.0.4"
+    },
+    "type": "module",
+    "dependencies": {
+      "@fontsource/fira-mono": "^4.2.2",
+      "@lukeed/uuid": "^2.0.0",
+      "cookie": "^0.4.1",
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
