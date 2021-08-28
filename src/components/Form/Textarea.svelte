@@ -7,13 +7,13 @@
 	export {className as class};
 </script>
 
-<div class={`cb-form-group ${className}`}>
-	<div class='cb-input cb-input_light'>
-		<div class='cb-input_light-box'><textarea name={name} placeholder={placeHolder}
+<div class={`rb-form-group ${className}`}>
+	<div class='rb-input rb-input_light'>
+		<div class='rb-input_light-box'><textarea name={name} placeholder={placeHolder}
 																							aria-label={placeHolder}
 																							bind:value={value}
 																							style='overflow: hidden; overflow-wrap: break-word; height: 93px;'></textarea>
-			<div class='cb-input_light-line'></div>
+			<div class='rb-input_light-line'></div>
 		</div>
 	</div>
 </div>
@@ -72,28 +72,28 @@
         }
     }
 
-    .cb-form-group {
+    .rb-form-group {
         margin: 0 0 45px 0;
     }
 
     @media (min-width: 768px) {
-        .cb-form-group {
+        .rb-form-group {
             margin: 0 0 70px 0;
         }
     }
 
-    .cb-input {
+    .rb-input {
         display: inline;
     }
 
-    .cb-input_light {
+    .rb-input_light {
         position: relative;
         display: block;
         line-height: 0;
         contain: content;
     }
 
-    .cb-input_light-line {
+    .rb-input_light-line {
         position: absolute;
         left: 0;
         right: 0;
@@ -118,17 +118,17 @@
     }
 
     @media (min-width: 768px) {
-        .cb-input_light-line {
+        .rb-input_light-line {
             height: 85px;
         }
     }
 
-    .cb-input_light-box {
+    .rb-input_light-box {
         position: relative;
         overflow: hidden;
     }
 
-    .cb-input_light textarea {
+    .rb-input_light textarea {
         position: relative;
         margin: 0;
         padding: 15px 0;
@@ -153,43 +153,43 @@
     }
 
     @media (min-width: 768px) {
-        .cb-input_light textarea {
+        .rb-input_light textarea {
             padding: 21px 0;
             font-size: 35px;
         }
     }
 
-    .cb-input_light textarea::-webkit-input-placeholder {
+    .rb-input_light textarea::-webkit-input-placeholder {
         color: #ccc;
         -webkit-transition: color .2s;
         transition: color .2s;
     }
 
-    .cb-input_light textarea:-moz-placeholder {
+    .rb-input_light textarea:-moz-placeholder {
         color: #ccc;
         -moz-transition: color .2s;
         transition: color .2s;
     }
 
-    .cb-input_light textarea::-moz-placeholder {
+    .rb-input_light textarea::-moz-placeholder {
         color: #ccc;
         -moz-transition: color .2s;
         transition: color .2s;
     }
 
-    .cb-input_light textarea:-ms-input-placeholder {
+    .rb-input_light textarea:-ms-input-placeholder {
         color: #ccc;
         -ms-transition: color .2s;
         transition: color .2s;
     }
 
-    .cb-input_light textarea::-ms-input-placeholder {
+    .rb-input_light textarea::-ms-input-placeholder {
         color: #ccc;
         -ms-transition: color .2s;
         transition: color .2s;
     }
 
-    .cb-input_light textarea::placeholder {
+    .rb-input_light textarea::placeholder {
         color: #ccc;
         -webkit-transition: color .2s;
         -o-transition: color .2s;
@@ -197,35 +197,35 @@
         transition: color .2s;
     }
 
-    .cb-input_light textarea:hover + .cb-input_light-line {
+    .rb-input_light textarea:hover + .rb-input_light-line {
         opacity: .6;
     }
 
-    .cb-input_light textarea:focus::-webkit-input-placeholder {
+    .rb-input_light textarea:focus::-webkit-input-placeholder {
         color: #b3b3b3;
     }
 
-    .cb-input_light textarea:focus:-moz-placeholder {
+    .rb-input_light textarea:focus:-moz-placeholder {
         color: #b3b3b3;
     }
 
-    .cb-input_light textarea:focus::-moz-placeholder {
+    .rb-input_light textarea:focus::-moz-placeholder {
         color: #b3b3b3;
     }
 
-    .cb-input_light textarea:focus:-ms-input-placeholder {
+    .rb-input_light textarea:focus:-ms-input-placeholder {
         color: #b3b3b3;
     }
 
-    .cb-input_light textarea:focus::-ms-input-placeholder {
+    .rb-input_light textarea:focus::-ms-input-placeholder {
         color: #b3b3b3;
     }
 
-    .cb-input_light textarea:focus::placeholder {
+    .rb-input_light textarea:focus::placeholder {
         color: #b3b3b3;
     }
 
-    .cb-input_light textarea:focus + .cb-input_light-line {
+    .rb-input_light textarea:focus + .rb-input_light-line {
         opacity: 1;
         -webkit-transform: translateX(0);
         -moz-transform: translateX(0);
@@ -238,77 +238,77 @@
         transition-duration: .8s, .4s;
     }
 
-    .cb-input_light textarea:invalid {
+    .rb-input_light textarea:invalid {
         -webkit-box-shadow: none;
         -moz-box-shadow: none;
         box-shadow: none;
         outline: 0;
     }
 
-    .cb-input_light textarea:disabled {
+    .rb-input_light textarea:disabled {
         opacity: .4;
         pointer-events: none;
     }
 
-    .cb-input_light textarea {
+    .rb-input_light textarea {
         height: 60px;
         font-size: 17px;
         line-height: 120%;
     }
 
     @media (min-width: 768px) {
-        .cb-input_light textarea {
+        .rb-input_light textarea {
             height: 93px;
             font-size: 26px;
         }
     }
 
-    .cb-input_light textarea::-webkit-input-placeholder {
+    .rb-input_light textarea::-webkit-input-placeholder {
         font-size: 24px;
     }
 
-    .cb-input_light textarea:-moz-placeholder {
+    .rb-input_light textarea:-moz-placeholder {
         font-size: 24px;
     }
 
-    .cb-input_light textarea::-moz-placeholder {
+    .rb-input_light textarea::-moz-placeholder {
         font-size: 24px;
     }
 
-    .cb-input_light textarea:-ms-input-placeholder {
+    .rb-input_light textarea:-ms-input-placeholder {
         font-size: 24px;
     }
 
-    .cb-input_light textarea::-ms-input-placeholder {
+    .rb-input_light textarea::-ms-input-placeholder {
         font-size: 24px;
     }
 
-    .cb-input_light textarea::placeholder {
+    .rb-input_light textarea::placeholder {
         font-size: 24px;
     }
 
     @media (min-width: 768px) {
-        .cb-input_light textarea::-webkit-input-placeholder {
+        .rb-input_light textarea::-webkit-input-placeholder {
             font-size: 35px;
         }
 
-        .cb-input_light textarea:-moz-placeholder {
+        .rb-input_light textarea:-moz-placeholder {
             font-size: 35px;
         }
 
-        .cb-input_light textarea::-moz-placeholder {
+        .rb-input_light textarea::-moz-placeholder {
             font-size: 35px;
         }
 
-        .cb-input_light textarea:-ms-input-placeholder {
+        .rb-input_light textarea:-ms-input-placeholder {
             font-size: 35px;
         }
 
-        .cb-input_light textarea::-ms-input-placeholder {
+        .rb-input_light textarea::-ms-input-placeholder {
             font-size: 35px;
         }
 
-        .cb-input_light textarea::placeholder {
+        .rb-input_light textarea::placeholder {
             font-size: 35px;
         }
     }

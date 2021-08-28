@@ -7,15 +7,15 @@
 	let className = '';
 </script>
 
-<div class={`cb-form-group ${className}`}>
-	<div class='cb-input cb-input_light'>
-		<div class='cb-input_light-box'>
+<div class={`rb-form-group ${className}`}>
+	<div class='rb-input rb-input_light'>
+		<div class='rb-input_light-box'>
 			<input type='text' name={name}
 						 bind:value={value}
 						 placeholder={placeHolder} aria-label={placeHolder}>
-			<div class='cb-input_light-line'></div>
+			<div class='rb-input_light-line'></div>
 		</div>
-		<div class='cb-input_light-message'>{message}</div>
+		<div class='rb-input_light-message'>{message}</div>
 	</div>
 </div>
 
@@ -70,24 +70,24 @@
             box-shadow: none !important;
         }
     }
-    .cb-form-group {
+    .rb-form-group {
         margin: 0 0 45px 0;
     }
     @media (min-width: 768px) {
-        .cb-form-group {
+        .rb-form-group {
             margin: 0 0 70px 0;
         }
     }
-    .cb-input {
+    .rb-input {
         display: inline;
     }
-    .cb-input_light {
+    .rb-input_light {
         position: relative;
         display: block;
         line-height: 0;
         contain: content;
     }
-    .cb-input_light-line {
+    .rb-input_light-line {
         position: absolute;
         left: 0;
         right: 0;
@@ -116,24 +116,24 @@
         -o-transform 0s cubic-bezier(0, 0.25, 0.5, 1);
     }
     @media (min-width: 768px) {
-        .cb-input_light-line {
+        .rb-input_light-line {
             height: 85px;
         }
     }
-    .cb-input_light-box {
+    .rb-input_light-box {
         position: relative;
         overflow: hidden;
     }
-    .cb-input_light-message {
+    .rb-input_light-message {
         margin: 15px 0 0 0;
         color: #eb4242;
         font-size: 16px;
         line-height: 25px;
     }
-    .cb-input_light-message:empty {
+    .rb-input_light-message:empty {
         display: none;
     }
-    .cb-input_light input {
+    .rb-input_light input {
         position: relative;
         margin: 0;
         padding: 15px 0;
@@ -157,65 +157,65 @@
         transition: all 0.3s, height 0s;
     }
     @media (min-width: 768px) {
-        .cb-input_light input {
+        .rb-input_light input {
             padding: 21px 0;
             font-size: 35px;
         }
     }
-    .cb-input_light input::-webkit-input-placeholder {
+    .rb-input_light input::-webkit-input-placeholder {
         color: #ccc;
         -webkit-transition: color 0.2s;
         transition: color 0.2s;
     }
-    .cb-input_light input:-moz-placeholder {
+    .rb-input_light input:-moz-placeholder {
         color: #ccc;
         -moz-transition: color 0.2s;
         transition: color 0.2s;
     }
-    .cb-input_light input::-moz-placeholder {
+    .rb-input_light input::-moz-placeholder {
         color: #ccc;
         -moz-transition: color 0.2s;
         transition: color 0.2s;
     }
-    .cb-input_light input:-ms-input-placeholder {
+    .rb-input_light input:-ms-input-placeholder {
         color: #ccc;
         -ms-transition: color 0.2s;
         transition: color 0.2s;
     }
-    .cb-input_light input::-ms-input-placeholder {
+    .rb-input_light input::-ms-input-placeholder {
         color: #ccc;
         -ms-transition: color 0.2s;
         transition: color 0.2s;
     }
-    .cb-input_light input::placeholder {
+    .rb-input_light input::placeholder {
         color: #ccc;
         -webkit-transition: color 0.2s;
         -o-transition: color 0.2s;
         -moz-transition: color 0.2s;
         transition: color 0.2s;
     }
-    .cb-input_light input:hover + .cb-input_light-line {
+    .rb-input_light input:hover + .rb-input_light-line {
         opacity: 0.6;
     }
-    .cb-input_light input:focus::-webkit-input-placeholder {
+    .rb-input_light input:focus::-webkit-input-placeholder {
         color: #b3b3b3;
     }
-    .cb-input_light input:focus:-moz-placeholder {
+    .rb-input_light input:focus:-moz-placeholder {
         color: #b3b3b3;
     }
-    .cb-input_light input:focus::-moz-placeholder {
+    .rb-input_light input:focus::-moz-placeholder {
         color: #b3b3b3;
     }
-    .cb-input_light input:focus:-ms-input-placeholder {
+    .rb-input_light input:focus:-ms-input-placeholder {
         color: #b3b3b3;
     }
-    .cb-input_light input:focus::-ms-input-placeholder {
+    .rb-input_light input:focus::-ms-input-placeholder {
         color: #b3b3b3;
     }
-    .cb-input_light input:focus::placeholder {
+    .rb-input_light input:focus::placeholder {
         color: #b3b3b3;
     }
-    .cb-input_light input:focus + .cb-input_light-line {
+    .rb-input_light input:focus + .rb-input_light-line {
         opacity: 1;
         -webkit-transform: translateX(0);
         -moz-transform: translateX(0);
@@ -227,13 +227,13 @@
         -o-transition-duration: 0.8s, 0.4s;
         transition-duration: 0.8s, 0.4s;
     }
-    .cb-input_light input:invalid {
+    .rb-input_light input:invalid {
         -webkit-box-shadow: none;
         -moz-box-shadow: none;
         box-shadow: none;
         outline: 0;
     }
-    .cb-input_light input:disabled {
+    .rb-input_light input:disabled {
         opacity: 0.4;
         pointer-events: none;
     }

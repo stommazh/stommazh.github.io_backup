@@ -11,8 +11,8 @@
     "format": "prettier --write --plugin-search-dir=. ."
   },
   "devDependencies": {
-    "@sveltejs/adapter-static": "next",
-    "@sveltejs/kit": "next",
+    "@sveltejs/adapter-static": "^1.0.0-next.17",
+    "@sveltejs/kit": "^1.0.0-next.158",
     "@types/cookie": "^0.4.0",
     "@typescript-eslint/eslint-plugin": "^4.19.0",
     "@typescript-eslint/parser": "^4.19.0",
@@ -38,6 +38,7 @@
     "@lukeed/uuid": "^2.0.0",
     "cookie": "^0.4.1",
     "libphonenumber-js": "^1.9.23",
+    "locomotive-scroll": "^4.1.1",
     "svelte-helpers": "^0.2.0"
   }
 }

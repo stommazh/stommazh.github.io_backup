@@ -4,11 +4,11 @@
 
 <script lang='ts'>
 	import { onMount } from 'svelte';
-	import Input from '../../components/Form/Input.svelte';
-	import Checkbox from '../../components/Form/Checkbox.svelte';
+	import Input from '../components/Form/Input.svelte';
+	import Checkbox from '../components/Form/Checkbox.svelte';
 	import { writable } from 'svelte/store';
-	import Textarea from '../../components/Form/Textarea.svelte';
-	import {isValidPhoneNumber} from 'libphonenumber-js';
+	import Textarea from '../components/Form/Textarea.svelte';
+	import isValidPhoneNumber from 'libphonenumber-js';
 
 	const form = writable({
 		name: '',
@@ -32,14 +32,37 @@
 	});
 	const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 	let isValidEmail, isValidMessage, isValidPhone, isValidName, isValidInterest, isFormValid;
+	let emailError, messageError, phoneError, nameError, interestError;
 
 	$: {
-		isValidEmail = emailRegex.test($form.email);
+		emailError = $form.email.trim().length ? (emailRegex.test($form.email) ? '' : '') : '';
+		isValidEmail = !emailError;
 		isValidMessage = !!$form.content.trim().length;
 		isValidPhone = isValidPhoneNumber($form.phone, 'VN');
 		isValidName = !!($form.name.trim().length > 2);
 		isFormValid = isValidMessage && isValidEmail && isValidPhone && isValidName;
 	}
+
+	function checkName()
+		{
+			nameError = $form.content.trim().length ? '' : 'Vui lòng cho biết tên của bạn';
+		}
+
+	function checkPhone()
+		{
+			phoneError = $form.phone.trim().length ? (isValidPhoneNumber($form.phone, 'VN') ? '' : 'Số điện thoại này dường như không tồn tại') : 'Vui lòng điền số điện thoại liên hệ';
+		}
+
+	function checkEmail()
+		{
+			const formattedEmail = $form.email.trim();
+			emailError = formattedEmail.length ? (emailRegex.test(formattedEmail) ? '' : 'Vui lòng kiểm tra lại địa chỉ email này') : 'Vui lòng điền email của bạn';
+		}
+
+		function checkInterest()
+			{
+				interestError = $form.interest.filter(interest => interest.value).length ? '' : '';
+			}
 
 	// onMount(async () =>
 	// {
@@ -56,12 +79,7 @@
 
 </script>
 
-<svelte:head>
-	<script src='https://www.google.com/recaptcha/api.js'></script>
-	<title>Liên hệ | Thỏ 7 Màu</title>
-</svelte:head>
-
-<section class='request-form'>
+<section class='request-form pb-30' id='contact'>
 	<h1 class='text-6xl font-black py-12 text-transparent text-left'>
 		Liên hệ
 	</h1>
@@ -73,13 +91,13 @@
 			<Checkbox bind:checked={value} label={label} class='mr-5 mb-5' />
 		{/each}
 	</div>
-	<Input bind:value={$form.name} placeHolder='Họ và tên' name='name' />
+	<Input bind:value={$form.name} placeHolder='Họ và tên' name='name' on:blur={checkName} />
 	<Input bind:value={$form.phone} placeHolder='Số điện thoại' name='phone' />
 	<Input bind:value={$form.email} placeHolder='Email' name='email' />
 	<Textarea bind:value={$form.content} placeHolder='Nội dung liên hệ' name='message' />
 
-	<div class='cb-form-submit'>
-		<button class='cb-btn cb-btn_send' disabled={!isFormValid}>
+	<div class='rb-form-submit'>
+		<button class='rb-btn rb-btn_send' disabled={!isFormValid}>
 			<span data-text='Gởi đi'>Gửi đi</span>
 		</button>
 	</div>
@@ -170,11 +188,11 @@
     }
   }
 
-  .cb-form-submit {
+  .rb-form-submit {
     margin: 10px 0 0 0;
   }
 
-  .cb-btn_send {
+  .rb-btn_send {
     position: relative;
     display: inline-block;
     height: auto;
@@ -201,7 +219,7 @@
     -moz-transition: opacity .4s;
     transition: opacity .4s;
 
-		&:before {
+    &:before {
       content: "";
       display: block;
       position: absolute;
@@ -211,7 +229,7 @@
       bottom: -15px;
     }
 
-		&:after {
+    &:after {
       content: "";
       display: block;
       position: absolute;
@@ -227,9 +245,11 @@
       transition: transform .7s cubic-bezier(.19, 1, .22, 1);
       transition: transform .7s cubic-bezier(.19, 1, .22, 1), -webkit-transform .7s cubic-bezier(.19, 1, .22, 1), -moz-transform .7s cubic-bezier(.19, 1, .22, 1), -o-transform .7s cubic-bezier(.19, 1, .22, 1);
     }
+
     &:focus, &:hover {
       text-decoration: none;
     }
+
     &:focus:after, &:hover:after {
       -webkit-transform: scaleX(0);
       -moz-transform: scaleX(0);
@@ -238,15 +258,15 @@
       transform: scaleX(0);
     }
 
-		&:disabled {
+    &:disabled {
       opacity: .3;
       pointer-events: none;
     }
 
-		@screen md {
+    @screen md {
       padding: 9px 0;
       font-size: 22px;
       line-height: 28px;
-		}
+    }
   }
 </style>

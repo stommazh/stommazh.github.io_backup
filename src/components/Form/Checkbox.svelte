@@ -10,15 +10,15 @@
 	}
 </script>
 
-<div class={`cb-checkbox cb-checkbox_rounded ${className}`}>
+<div class={`rb-checkbox rb-checkbox_rounded ${className}`}>
 	<label>
 		<input type='checkbox' on:change={valueChanged}
 					 bind:checked={checked}>
-		<span class='cb-checkbox_rounded-box'>
-				<span class='cb-checkbox_rounded-title'>
+		<span class='rb-checkbox_rounded-box'>
+				<span class='rb-checkbox_rounded-title'>
 					<span data-text={label}>{label}</span>
 				</span>
-				<span class='cb-checkbox_rounded-ripple'>
+				<span class='rb-checkbox_rounded-ripple'>
 					<span></span>
 				</span>
 			</span>
@@ -52,7 +52,7 @@
         -moz-box-sizing: border-box;
         box-sizing: border-box;
     }
-    .cb-checkbox_rounded label > input:focus ~ .cb-checkbox_rounded-box,
+    .rb-checkbox_rounded label > input:focus ~ .rb-checkbox_rounded-box,
     :focus {
         outline: 0 !important;
     }
@@ -83,23 +83,23 @@
             box-shadow: none !important;
         }
     }
-    .cb-checkbox {
+    .rb-checkbox {
         display: inline;
     }
-    .cb-checkbox-group .cb-checkbox {
+    .rb-checkbox-group .rb-checkbox {
         margin: 7px 6px;
     }
     @media (min-width: 768px) {
-        .cb-checkbox-group .cb-checkbox {
+        .rb-checkbox-group .rb-checkbox {
             margin: 12px 9px;
         }
     }
     @media (min-width: 1600px) {
-        .cb-checkbox-group .cb-checkbox {
+        .rb-checkbox-group .rb-checkbox {
             margin: 15px 10px;
         }
     }
-    .cb-checkbox_rounded {
+    .rb-checkbox_rounded {
         position: relative;
         display: inline-block;
         vertical-align: middle;
@@ -109,7 +109,7 @@
         user-select: none;
         contain: content;
     }
-    .cb-checkbox_rounded:before {
+    .rb-checkbox_rounded:before {
         content: "";
         display: block;
         position: absolute;
@@ -118,7 +118,7 @@
         right: -10px;
         bottom: -15px;
     }
-    .cb-checkbox_rounded-box {
+    .rb-checkbox_rounded-box {
         position: relative;
         display: -webkit-box;
         display: -webkit-flex;
@@ -154,7 +154,7 @@
         transition: opacity 0.4s;
     }
     @media (min-width: 768px) {
-        .cb-checkbox_rounded-box {
+        .rb-checkbox_rounded-box {
             padding: 0 32px;
             height: 65px;
             font-size: 18px;
@@ -164,7 +164,7 @@
         }
     }
     @media (min-width: 1600px) {
-        .cb-checkbox_rounded-box {
+        .rb-checkbox_rounded-box {
             height: 72px;
             padding: 0 35px;
             font-size: 20px;
@@ -173,7 +173,7 @@
             border-radius: 100px;
         }
     }
-    .cb-checkbox_rounded-box:before {
+    .rb-checkbox_rounded-box:before {
         content: "";
         position: absolute;
         top: 0;
@@ -190,34 +190,34 @@
         transition: border-color 0.2s;
     }
     @media (min-width: 768px) {
-        .cb-checkbox_rounded-box:before {
+        .rb-checkbox_rounded-box:before {
             -webkit-border-radius: 90px;
             -moz-border-radius: 90px;
             border-radius: 90px;
         }
     }
     @media (min-width: 1600px) {
-        .cb-checkbox_rounded-box:before {
+        .rb-checkbox_rounded-box:before {
             -webkit-border-radius: 100px;
             -moz-border-radius: 100px;
             border-radius: 100px;
         }
     }
-    .cb-checkbox_rounded label > input:focus ~ .cb-checkbox_rounded-box:before,
-    .cb-checkbox_rounded-box:focus:before {
+    .rb-checkbox_rounded label > input:focus ~ .rb-checkbox_rounded-box:before,
+    .rb-checkbox_rounded-box:focus:before {
         border-color: rgba(0, 0, 0, 0.25);
     }
-    .cb-checkbox_rounded label > input:disabled ~ .cb-checkbox_rounded-box {
+    .rb-checkbox_rounded label > input:disabled ~ .rb-checkbox_rounded-box {
         opacity: 0.4;
         pointer-events: none;
     }
-    .cb-checkbox_rounded-title {
+    .rb-checkbox_rounded-title {
         position: relative;
         top: -1px;
         display: block;
         overflow: hidden;
     }
-    .cb-checkbox_rounded-title span {
+    .rb-checkbox_rounded-title span {
         display: block;
         position: relative;
         z-index: 2;
@@ -234,7 +234,7 @@
         -o-transform-origin: left top;
         transform-origin: left top;
     }
-    .cb-checkbox_rounded-title span:after {
+    .rb-checkbox_rounded-title span:after {
         content: attr(data-text);
         display: block;
         position: absolute;
@@ -258,7 +258,7 @@
         transition: transform 0.4s, -webkit-transform 0.4s, -moz-transform 0.4s,
         -o-transform 0.4s;
     }
-    .cb-checkbox_rounded-ripple {
+    .rb-checkbox_rounded-ripple {
         display: block;
         position: absolute;
         top: 0;
@@ -274,20 +274,20 @@
         border-radius: 68px;
     }
     @media (min-width: 768px) {
-        .cb-checkbox_rounded-ripple {
+        .rb-checkbox_rounded-ripple {
             -webkit-border-radius: 90px;
             -moz-border-radius: 90px;
             border-radius: 90px;
         }
     }
     @media (min-width: 1600px) {
-        .cb-checkbox_rounded-ripple {
+        .rb-checkbox_rounded-ripple {
             -webkit-border-radius: 100px;
             -moz-border-radius: 100px;
             border-radius: 100px;
         }
     }
-    .cb-checkbox_rounded-ripple span {
+    .rb-checkbox_rounded-ripple span {
         display: block;
         width: 100%;
         height: 100%;
@@ -318,10 +318,10 @@
         -webkit-border-radius 0.5s cubic-bezier(0.4, 0, 0, 1),
         -moz-border-radius 0.5s cubic-bezier(0.4, 0, 0, 1);
     }
-    .cb-checkbox_rounded:hover .cb-checkbox_rounded-ripple {
+    .rb-checkbox_rounded:hover .rb-checkbox_rounded-ripple {
         -webkit-mask-image: -webkit-radial-gradient(circle, #fff 100%, #000 100%);
     }
-    .cb-checkbox_rounded:hover .cb-checkbox_rounded-title span {
+    .rb-checkbox_rounded:hover .rb-checkbox_rounded-title span {
         -webkit-transform: translateY(-150%) skewY(-7deg);
         -moz-transform: translateY(-150%) skewY(-7deg);
         -ms-transform: translateY(-150%) skewY(-7deg);
@@ -329,7 +329,7 @@
         transform: translateY(-150%) skewY(-7deg);
     }
     @media (pointer: coarse) {
-        .cb-checkbox_rounded:hover .cb-checkbox_rounded-title span {
+        .rb-checkbox_rounded:hover .rb-checkbox_rounded-title span {
             -webkit-transform: none;
             -moz-transform: none;
             -ms-transform: none;
@@ -337,7 +337,7 @@
             transform: none;
         }
     }
-    .cb-checkbox_rounded:hover .cb-checkbox_rounded-title span:after {
+    .rb-checkbox_rounded:hover .rb-checkbox_rounded-title span:after {
         -webkit-transform: skewY(7deg);
         -moz-transform: skewY(7deg);
         -ms-transform: skewY(7deg);
@@ -345,7 +345,7 @@
         transform: skewY(7deg);
     }
     @media (pointer: coarse) {
-        .cb-checkbox_rounded:hover .cb-checkbox_rounded-title span:after {
+        .rb-checkbox_rounded:hover .rb-checkbox_rounded-title span:after {
             -webkit-transform: none;
             -moz-transform: none;
             -ms-transform: none;
@@ -353,10 +353,10 @@
             transform: none;
         }
     }
-    .cb-checkbox_rounded label {
+    .rb-checkbox_rounded label {
         cursor: pointer;
     }
-    .cb-checkbox_rounded label > input {
+    .rb-checkbox_rounded label > input {
         position: absolute;
         padding: 0;
         margin: 0;
@@ -366,26 +366,26 @@
         visibility: hidden;
         opacity: 0;
     }
-    .cb-checkbox_rounded
+    .rb-checkbox_rounded
     label
     > input:checked
-    ~ .cb-checkbox_rounded-box
-    .cb-checkbox_rounded-title {
+    ~ .rb-checkbox_rounded-box
+    .rb-checkbox_rounded-title {
         color: #fff;
     }
     .chrome
-    .cb-checkbox_rounded
+    .rb-checkbox_rounded
     label
     > input:checked
-    ~ .cb-checkbox_rounded-box
-    .cb-checkbox_rounded-ripple {
+    ~ .rb-checkbox_rounded-box
+    .rb-checkbox_rounded-ripple {
         -webkit-mask-image: -webkit-radial-gradient(circle, #fff 100%, #000 100%);
     }
-    .cb-checkbox_rounded
+    .rb-checkbox_rounded
     label
     > input:checked
-    ~ .cb-checkbox_rounded-box
-    .cb-checkbox_rounded-ripple
+    ~ .rb-checkbox_rounded-box
+    .rb-checkbox_rounded-ripple
     span {
         -webkit-border-radius: 0;
         -moz-border-radius: 0;
@@ -397,14 +397,14 @@
         -moz-transition-duration: 0s, 0s;
         -o-transition-duration: 0s, 0s;
         transition-duration: 0s, 0s;
-        -webkit-animation: cb-checkbox_rounded-ripple-in 0.5s
+        -webkit-animation: rb-checkbox_rounded-ripple-in 0.5s
         cubic-bezier(0.4, 0, 0, 1);
-        -moz-animation: cb-checkbox_rounded-ripple-in 0.5s cubic-bezier(0.4, 0, 0, 1);
-        -o-animation: cb-checkbox_rounded-ripple-in 0.5s cubic-bezier(0.4, 0, 0, 1);
-        animation: cb-checkbox_rounded-ripple-in 0.5s cubic-bezier(0.4, 0, 0, 1);
+        -moz-animation: rb-checkbox_rounded-ripple-in 0.5s cubic-bezier(0.4, 0, 0, 1);
+        -o-animation: rb-checkbox_rounded-ripple-in 0.5s cubic-bezier(0.4, 0, 0, 1);
+        animation: rb-checkbox_rounded-ripple-in 0.5s cubic-bezier(0.4, 0, 0, 1);
     }
     /*! CSS Used keyframes */
-    @-webkit-keyframes cb-checkbox_rounded-ripple-in {
+    @-webkit-keyframes rb-checkbox_rounded-ripple-in {
         0% {
             -webkit-border-radius: 100%;
             border-radius: 100%;
@@ -418,7 +418,7 @@
             transform: translateY(0) translateZ(0);
         }
     }
-    @-moz-keyframes cb-checkbox_rounded-ripple-in {
+    @-moz-keyframes rb-checkbox_rounded-ripple-in {
         0% {
             -moz-border-radius: 100%;
             border-radius: 100%;
@@ -432,7 +432,7 @@
             transform: translateY(0) translateZ(0);
         }
     }
-    @-o-keyframes cb-checkbox_rounded-ripple-in {
+    @-o-keyframes rb-checkbox_rounded-ripple-in {
         0% {
             border-radius: 100%;
             transform: translateY(-100%) translateZ(0);
@@ -442,7 +442,7 @@
             transform: translateY(0) translateZ(0);
         }
     }
-    @keyframes cb-checkbox_rounded-ripple-in {
+    @keyframes rb-checkbox_rounded-ripple-in {
         0% {
             -webkit-border-radius: 100%;
             -moz-border-radius: 100%;
